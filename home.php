@@ -35,7 +35,7 @@
 		</div>
 		<?php
 			/* add connection to mysql database */
-			include 'connection.php';
+			include '../connection.php';
 			session_start();
 			$newevent = $_POST['event'];
 			$starttime = $_POST['start'];
