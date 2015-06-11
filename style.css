@@ -1,0 +1,69 @@
+/* make html only take up 80% of page and center it */
+html {
+	width: 80%;
+	margin: auto;
+}
+
+/* position and style title of page */
+#title {
+	float: left;
+	margin-left: 10%;
+	font-family: 'Consolas', 'Monaco', 'Courier new';
+	font-size: 24px;
+}
+
+/* position login form */
+#login {
+	margin: auto;
+	width: 60%;
+	text-align: center;
+	margin-top: 10%;
+	clear: both;
+}
+
+/* make input look nicer and larger */
+input {
+	font-size: 20px;
+	padding: 10px 10px 10px 10px;
+}
+
+input[type=submit] {
+	background-color: rgba(20, 50, 200, 0.3);
+	padding: 10px 10px 10px 10px;
+	color: white;
+}
+
+/* extra styling for input in login */
+#login input {
+	box-shadow: 1px 1px 2px 2px #CCC;
+	-moz-box-shadow: 1px 1px 2px 2px #CCC;
+	-webkit-box-shadow: 1px 1px 2px 2px #CCC;
+}
+
+/* position and style sign up button */
+#buttonwrapper, #secondbutton {
+	margin: auto;
+	margin-top: 2%;
+	width: 5%;
+}
+
+input[type=button] {
+	text-align: center;
+	font-size: 12px;
+	padding: 10px 10px 10px 10px;
+	background-color: rgba(20, 50, 200, 0.3);
+	color: white;
+	box-shadow: 1px 1px 2px 2px #CCC;
+	-moz-box-shadow: 1px 1px 2px 2px #CCC;
+	-webkit-box-shadow: 1px 1px 2px 2px #CCC;
+}
+
+/* position registration form */
+#register {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	text-align: center;
+	clear: both;
+}

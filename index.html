@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<!-- Set the viewport width to device width for mobile -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<title>Schedule Planner</title>
+
+		<!-- Stylesheet used in login page -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+
+		<!-- Script pages that are used -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<h1>Site Under Construction!</h1>
+		<div id="title">
+			<h2>Schedule Planner</h2>
+		</div>
+		<div id="login">
+			<form id="loginform" action="login.php" method="post">
+				<input placeholder="Email Address" type="text" name="email" />
+				<input placeholder="Password" type="password" name="password" />
+				<input type="submit" value="Log In"/>
+			</form>
+		</div>
+
+		<!-- button to bring up sign up form and button to hide it -->
+		<div id="buttonwrapper">
+			<input id="signup" type="button" value="Sign Up" />
+		</div>
+
+		<div id="secondbutton">
+			<input id="hide" type="button" value="Hide" />
+		</div>
+
+		<div id="register">
+			<form action="register.php" method="post">
+				<input placeholder="First Name" type="text" name="fname"><br>
+				<input placeholder="Last Name" type="text" name="lname"><br>
+				<input placeholder="Email Address" type="text" name="email"><br>
+				<input placeholder="Password" type="password" name="pass"><br>
+				<input placeholder="Confirm Password" type="password" name="cpass"><br>
+				<input type="submit" value="Sign Up"/>
+			</form>
+		</div>
+	</body>
+</html>

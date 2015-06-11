@@ -1,0 +1,21 @@
+#color {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 1px solid black;
+}
+
+#event {
+	float: right;
+	clear: right;
+	margin-right: 50px;
+}
+
+#calendar {
+	float: left;
+	width: 70%;
+}
+
+#logout {
+	float: right;
+}
