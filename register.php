@@ -17,6 +17,7 @@
 				$hash = crypt($pass);
 				$query = "INSERT INTO users (fname, lname, email, password) VALUES ('$fname', '$lname', '$email', '$hash')";
 				mysqli_query($con, $query);
+				header('Location: home.php');
 			} else {
 				echo "Password must be 8 characters long!";
 			}
