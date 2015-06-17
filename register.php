@@ -9,20 +9,28 @@
 
 	/* check that register form is filled */
 	if($fname != null && $lname != null && $email != null && $pass != null && $cpass != null) {
-		/* check that passwords match */
-		if($pass == $cpass) {
-			/* check that password is 8 characters long */
-			if(strlen($pass) >= 8) {
-				/* hash password for security */
-				$hash = crypt($pass);
-				$query = "INSERT INTO users (fname, lname, email, password) VALUES ('$fname', '$lname', '$email', '$hash')";
-				mysqli_query($con, $query);
-				header('Location: home.php');
+		/* check if email is already in database */
+		$query = "SELECT * FROM users WHERE email='$email'";
+		$result = mysqli_query($con, $query);
+		if($result == null) {
+			/* check that passwords match */
+			if($pass == $cpass) {
+				/* check that password is 8 characters long */
+				if(strlen($pass) >= 8) {
+					/* hash password for security */
+					$hash = crypt($pass);
+					$query = "INSERT INTO users (fname, lname, email, password) VALUES ('$fname', '$lname', '$email', '$hash')";
+					mysqli_query($con, $query);
+					header('Location: home.php');
+				} else {
+					echo "Password must be 8 characters long!";
+				}
 			} else {
-				echo "Password must be 8 characters long!";
+				echo "Passwords do not match!";
 			}
 		} else {
-			echo "Passwords do not match!";
+			//	echo "Email is already in used in our system! If you forgot your password <a href = 'change.php'>Click Here</a>";
+			echo "Email is already in used in our system!";
 		}
 	} else {
 		echo "Please fill out form completely!";
