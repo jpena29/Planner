@@ -29,8 +29,7 @@
 				echo "Passwords do not match!";
 			}
 		} else {
-			//	echo "Email is already in used in our system! If you forgot your password <a href = 'change.php'>Click Here</a>";
-			echo "Email is already in used in our system!";
+			echo "Email is already in used in our system! If you forgot your password <a href = 'changepass.php'>Click Here</a>";
 		}
 	} else {
 		echo "Please fill out form completely!";
