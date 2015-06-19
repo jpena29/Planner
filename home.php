@@ -53,17 +53,10 @@
 						/* retrieve info to send to jquery */
 						$query = "SELECT * FROM events WHERE userid='$userid' AND title='$newevent' AND start='$starttime'";
 						$result = mysqli_query($con, $query);
+						$row = mysqli_fetch_row($result);
+					
 						while($row = mysqli_fetch_row($result)) {
-							?>
-							<script type="text/javascript">
-								var newevent = <?php echo json_encode($row) ?>;
-								$(document).ready(function() {
-									$('#calendar').fullCalendar( {
-										events: newevent
-									})
-								});
-							</script>
-							<?php
+															
 						}
 					}
 				}

@@ -1,5 +1,6 @@
 <?php
 	include '../connection.php';
+	session_start();
 
 	$email = $_POST['email'];
 	$pass = $_POST['password'];
@@ -16,6 +17,7 @@
 		$row = mysqli_fetch_array($result);
 		
 		if(strcmp($row['password'], crypt($pass, $row['password'])) == 0) {
+			$_SESSION['userid'] = $row['userid'];
 			header('Location: home.php');
 		} else {
 			echo "Incorrect password";
